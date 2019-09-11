@@ -1,0 +1,47 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.1'
+
+def networking
+  pod 'Moya', '~> 13.0'
+  pod 'ObjectMapper'
+  pod 'Kingfisher', '4.10.0'
+end
+
+def autolayout
+  pod 'SnapKit', '~> 5.0.0'
+end
+
+def untilities
+  pod 'SwiftLint'
+  pod 'SwiftDate'
+end
+
+def testing
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'Nimble-Snapshots'
+end
+
+def ui
+  pod 'SwiftMessages'
+  pod 'SkeletonView', :git => 'https://github.com/dangthaison91/SkeletonView.git', :branch => 'develop'
+end 
+
+def database
+  pod 'KeychainAccess'
+end 
+target 'FakeUnsplash' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for FakeUnsplash
+  networking
+  autolayout
+  untilities
+
+  target 'FakeUnsplashTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
