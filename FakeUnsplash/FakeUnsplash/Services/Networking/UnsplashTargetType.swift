@@ -15,6 +15,17 @@ enum UnsplashTargetType {
         case latest, oldest, popular
     }
     
+    static func readJSONFromFile(fileName: String) -> Data? {
+        if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
+            
+            let fileUrl = URL(fileURLWithPath: path)
+            // Getting data from JSON file using the file URL
+            return try? Data(contentsOf: fileUrl, options: .mappedIfSafe)
+            
+        }
+        return nil
+    }
+    
     case authorize(clientID: String, redirectUri: String, responseType: String, scope: String)
     case token(clientID: String, clientSecret: String,  redirectUri: String, code: String, grantType: String)
     //
@@ -22,12 +33,13 @@ enum UnsplashTargetType {
     
 }
 extension UnsplashTargetType: TargetType  {
+    
     var baseURL: URL {
         switch self {
         case .authorize, .token:
             return URL(string: UnsplashApiConfig.AUTHORIZE_BASE_URL)!
         default:
-             return URL(string: UnsplashApiConfig.BASE_URL)!
+            return URL(string: UnsplashApiConfig.BASE_URL)!
         }
     }
     
@@ -52,7 +64,15 @@ extension UnsplashTargetType: TargetType  {
     }
     
     var sampleData: Data {
-        return Data(base64Encoded: "test")!
+        switch self {
+        case .listPhoto(let page, let _, let _):
+            if page == -1 {
+                return Data(base64Encoded: "")!
+            }
+            return UnsplashTargetType.readJSONFromFile(fileName: "ListPhoto")!
+        default:
+            return UnsplashTargetType.readJSONFromFile(fileName: "ListPhoto")!
+        }
     }
     
     var task: Task {
@@ -90,6 +110,8 @@ extension UnsplashTargetType: TargetType  {
         case .listPhoto, .authorize, .token:
             return .customCodes([200])
         }
-       
+        
     }
 }
+
+

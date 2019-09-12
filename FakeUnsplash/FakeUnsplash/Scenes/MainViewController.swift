@@ -22,12 +22,12 @@ class MainViewController: UIViewController {
 //            .catch { (er) in
 //                print(er)
 //        }
-        service.listPhoto(page: 1, perPage: 10, orderBy: .latest)
-            .done { (data) in
-                print(data)
-            }.catch { (er) in
-                print(er)
-        }
+//        service.listPhoto(page: 1, perPage: 10, orderBy: .latest)
+//            .done { (data) in
+//                print(data)
+//            }.catch { (er) in
+//                print(er)
+//        }
         
     }
 

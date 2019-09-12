@@ -50,8 +50,14 @@ extension UnsplashService: UnsplashApi {
             promiseRequest(.listPhoto(page: page, perPage: perPage, orderBy: orderBy))
                 .done({ (result) in
                     let apiResponse: T = try Mapper<UnsplashEntities.PhotoEntity>().mapArray(JSONString: result.mapString())
+                    seal.fulfill(apiResponse)
                 })
-            .catch(seal.reject)
+                .catch({ (er) in
+                    print(er)
+                })
+                .finally {
+                    print("finaly")
+            }
         }
     }
     
