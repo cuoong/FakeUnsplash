@@ -49,11 +49,7 @@ extension UnsplashService: UnsplashApi {
         return Promise<T> {seal in
             promiseRequest(.listPhoto(page: page, perPage: perPage, orderBy: orderBy))
                 .done({ (result) in
-                    if let json = try? result.mapJSON() {
-                        
-                        let photos: UnsplashEntities.PhotoEntity = Mapper<UnsplashEntities.PhotoEntity>().cr
-                    }
-                   
+                    let apiResponse: T = try Mapper<UnsplashEntities.PhotoEntity>().mapArray(JSONString: result.mapString())
                 })
             .catch(seal.reject)
         }

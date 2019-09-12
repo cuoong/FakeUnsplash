@@ -13,28 +13,28 @@ struct UnsplashEntities {
     struct PhotoEntity: ImmutableMappable {
         init(map: Map) throws {
             id = try map.value("id")
-            createdAt = try map.value("created_at")
-            updatedAt = try map.value("updated_at")
-            width = try map.value("width")
-            height = try map.value("height")
-            color = try map.value("color")
-            downloads = try map.value("downloads")
-            likes = try map.value("likes")
-            likedByUser = try map.value("liked_by_user")
-            description = try map.value("description")
-            links = try map.value("links")
+            createdAt = try? map.value("created_at")
+            updatedAt = try? map.value("updated_at")
+            width = try? map.value("width")
+            height = try? map.value("height")
+            color = try? map.value("color")
+            downloads = try? map.value("downloads")
+            likes = try? map.value("likes")
+            likedByUser = try? map.value("liked_by_user")
+            description = try? map.value("description")
+            links = try? map.value("links")
         }
         
         var id: String
-        var createdAt: Date
-        var updatedAt: Date
-        var width: Float
-        var height: Float
-        var color: String
-        var downloads: Int
-        var likes: Int
-        var likedByUser: Bool
-        var description: String
+        var createdAt: Date?
+        var updatedAt: Date?
+        var width: Float?
+        var height: Float?
+        var color: String?
+        var downloads: Int?
+        var likes: Int?
+        var likedByUser: Bool?
+        var description: String?
         var links: PhotoLinks?
         
     }
@@ -57,14 +57,6 @@ struct UnsplashEntities {
             donwloadLocation <- map["download_location"]
             html <- map["html"]
             this <- map["self"]
-        }
-    }
-    
-    struct GetListPhotoResponse: ImmutableMappable {
-        var photos: Array<PhotoEntity>
-        
-        init(map: Map) throws {
-            photos = try map.value(")
         }
     }
     
