@@ -101,8 +101,6 @@
 				5E3C0D1B2328E29B008853AC /* Scenes */,
 				5E3C0D1A2328E291008853AC /* Services */,
 				5E3C0CF72328E257008853AC /* AppDelegate.swift */,
-				5E3C0CF92328E257008853AC /* MainViewController.swift */,
-				5E3C0CFB2328E257008853AC /* Main.storyboard */,
 				5E3C0D012328E259008853AC /* Assets.xcassets */,
 				5E3C0D032328E259008853AC /* LaunchScreen.storyboard */,
 				5E3C0D062328E259008853AC /* Info.plist */,
@@ -132,6 +130,8 @@
 		5E3C0D1B2328E29B008853AC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5E3C0CF92328E257008853AC /* MainViewController.swift */,
+				5E3C0CFB2328E257008853AC /* Main.storyboard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
