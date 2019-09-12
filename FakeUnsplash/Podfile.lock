@@ -16,6 +16,9 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.11.0):
     - PromiseKit/CorePromise
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
   - Result (4.1.0)
   - SnapKit (5.0.1)
   - SwiftDate (6.0.3)
@@ -26,6 +29,7 @@ DEPENDENCIES:
   - Moya (~> 13.0)
   - ObjectMapper
   - PromiseKit (~> 6.8)
+  - R.swift
   - SnapKit (~> 5.0.0)
   - SwiftDate
   - SwiftLint
@@ -37,6 +41,8 @@ SPEC REPOS:
     - Moya
     - ObjectMapper
     - PromiseKit
+    - R.swift
+    - R.swift.Library
     - Result
     - SnapKit
     - SwiftDate
@@ -48,11 +54,13 @@ SPEC CHECKSUMS:
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftDate: 8d4f14bf1ef68e95094511504856547bf9e3e1a6
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 1129453b24a14cd05fab1d60dd2fe1f0a0fca302
+PODFILE CHECKSUM: fa7aadc3a8fb01ed2ed98434580383f40146c22e
 
 COCOAPODS: 1.7.5

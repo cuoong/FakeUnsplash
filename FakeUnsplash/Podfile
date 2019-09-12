@@ -15,6 +15,7 @@ def untilities
   pod 'SwiftLint'
   pod 'SwiftDate'
   pod "PromiseKit", "~> 6.8"
+  pod 'R.swift'
 end
 
 def testing
