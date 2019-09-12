@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FakeUnsplash/Services/Networking/UnsplashService.swift"
+            timestampString = "589962722.200698"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "authorize(clientID:redirectUri:responseType:scope:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FakeUnsplash/MainViewController.swift"
+            timestampString = "589962722.201176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FakeUnsplash/MainViewController.swift"
+            timestampString = "589962722.201231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FakeUnsplash/Services/Networking/UnsplashService.swift"
+            timestampString = "589962722.201287"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "listPhoto(page:perPage:orderBy:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;FakeUnsplash.UnsplashEntities.PhotoEntity&gt;&gt;) -&gt; () in FakeUnsplash.UnsplashService.listPhoto(page: Swift.Int, perPage: Swift.Int, orderBy: FakeUnsplash.UnsplashTargetType.OrderBy) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;FakeUnsplash.UnsplashEntities.PhotoEntity&gt;&gt;"
+                  moduleName = "FakeUnsplash"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tranty/Desktop/sample/FakeUnsplash/FakeUnsplash/FakeUnsplash/Services/Networking/UnsplashService.swift"
+                  timestampString = "589960720.498998"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "346">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Moya.Response) -&gt; () in closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;FakeUnsplash.UnsplashEntities.PhotoEntity&gt;&gt;) -&gt; () in FakeUnsplash.UnsplashService.listPhoto(page: Swift.Int, perPage: Swift.Int, orderBy: FakeUnsplash.UnsplashTargetType.OrderBy) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;FakeUnsplash.UnsplashEntities.PhotoEntity&gt;&gt;"
+                  moduleName = "FakeUnsplash"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tranty/Desktop/sample/FakeUnsplash/FakeUnsplash/FakeUnsplash/Services/Networking/UnsplashService.swift"
+                  timestampString = "589960720.500852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

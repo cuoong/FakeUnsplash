@@ -15,8 +15,12 @@
 		5E3C0D022328E259008853AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3C0D012328E259008853AC /* Assets.xcassets */; };
 		5E3C0D052328E259008853AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3C0D032328E259008853AC /* LaunchScreen.storyboard */; };
 		5E3C0D102328E259008853AC /* FakeUnsplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0D0F2328E259008853AC /* FakeUnsplashTests.swift */; };
-		5E3C0D222328EA9A008853AC /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0D212328EA9A008853AC /* UnsplashAPI.swift */; };
+		5E3C0D222328EA9A008853AC /* UnsplashTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0D212328EA9A008853AC /* UnsplashTargetType.swift */; };
 		5E3C0D242328EB2B008853AC /* UnsplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0D232328EB2B008853AC /* UnsplashService.swift */; };
+		B63830E32329E0F9003E34C4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E22329E0F8003E34C4 /* Networking.swift */; };
+		B63830E52329E1AB003E34C4 /* UnsplashApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E42329E1AB003E34C4 /* UnsplashApi.swift */; };
+		B63830E72329E321003E34C4 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E62329E321003E34C4 /* Entities.swift */; };
+		B63830E92329EC82003E34C4 /* UnsplashApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E82329EC82003E34C4 /* UnsplashApiConfig.swift */; };
 		BEB19EF857FFA46D51549C1B /* Pods_FakeUnsplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21187672123BAE070EEEE96 /* Pods_FakeUnsplashTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +48,13 @@
 		5E3C0D0B2328E259008853AC /* FakeUnsplashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeUnsplashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3C0D0F2328E259008853AC /* FakeUnsplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUnsplashTests.swift; sourceTree = "<group>"; };
 		5E3C0D112328E259008853AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E3C0D212328EA9A008853AC /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
+		5E3C0D212328EA9A008853AC /* UnsplashTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashTargetType.swift; sourceTree = "<group>"; };
 		5E3C0D232328EB2B008853AC /* UnsplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
 		69B3A749ADE9F504FBBE5C7A /* Pods-FakeUnsplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUnsplash.release.xcconfig"; path = "Target Support Files/Pods-FakeUnsplash/Pods-FakeUnsplash.release.xcconfig"; sourceTree = "<group>"; };
+		B63830E22329E0F8003E34C4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		B63830E42329E1AB003E34C4 /* UnsplashApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashApi.swift; sourceTree = "<group>"; };
+		B63830E62329E321003E34C4 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		B63830E82329EC82003E34C4 /* UnsplashApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashApiConfig.swift; sourceTree = "<group>"; };
 		C7027F511B7B818C2FFDB85C /* Pods_FakeUnsplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FakeUnsplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EA385C575711F7B76A038D /* Pods-FakeUnsplashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUnsplashTests.release.xcconfig"; path = "Target Support Files/Pods-FakeUnsplashTests/Pods-FakeUnsplashTests.release.xcconfig"; sourceTree = "<group>"; };
 		E21187672123BAE070EEEE96 /* Pods_FakeUnsplashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FakeUnsplashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				5E3C0D202328EA3F008853AC /* Networking */,
-				5E3C0D232328EB2B008853AC /* UnsplashService.swift */,
+				B63830E22329E0F8003E34C4 /* Networking.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -160,7 +168,11 @@
 		5E3C0D202328EA3F008853AC /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				5E3C0D212328EA9A008853AC /* UnsplashAPI.swift */,
+				5E3C0D232328EB2B008853AC /* UnsplashService.swift */,
+				5E3C0D212328EA9A008853AC /* UnsplashTargetType.swift */,
+				B63830E42329E1AB003E34C4 /* UnsplashApi.swift */,
+				B63830E62329E321003E34C4 /* Entities.swift */,
+				B63830E82329EC82003E34C4 /* UnsplashApiConfig.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -353,11 +365,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E3C0D222328EA9A008853AC /* UnsplashAPI.swift in Sources */,
+				5E3C0D222328EA9A008853AC /* UnsplashTargetType.swift in Sources */,
 				5E3C0CFA2328E257008853AC /* MainViewController.swift in Sources */,
 				5E3C0D002328E257008853AC /* FakeUnsplash.xcdatamodeld in Sources */,
+				B63830E32329E0F9003E34C4 /* Networking.swift in Sources */,
+				B63830E72329E321003E34C4 /* Entities.swift in Sources */,
+				B63830E52329E1AB003E34C4 /* UnsplashApi.swift in Sources */,
 				5E3C0CF82328E257008853AC /* AppDelegate.swift in Sources */,
 				5E3C0D242328EB2B008853AC /* UnsplashService.swift in Sources */,
+				B63830E92329EC82003E34C4 /* UnsplashApiConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
