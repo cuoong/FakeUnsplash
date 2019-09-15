@@ -52,12 +52,7 @@ extension UnsplashService: UnsplashApi {
                     let apiResponse: T = try Mapper<UnsplashEntities.PhotoEntity>().mapArray(JSONString: result.mapString())
                     seal.fulfill(apiResponse)
                 })
-                .catch({ (er) in
-                    print(er)
-                })
-                .finally {
-                    print("finaly")
-            }
+                .catch(seal.reject)
         }
     }
     

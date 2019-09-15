@@ -23,6 +23,7 @@ struct UnsplashEntities {
             likedByUser = try? map.value("liked_by_user")
             description = try? map.value("description")
             links = try? map.value("links")
+            urls = try map.value("urls")
         }
         
         var id: String
@@ -36,7 +37,7 @@ struct UnsplashEntities {
         var likedByUser: Bool?
         var description: String?
         var links: PhotoLinks?
-        
+        var urls: PhotoUrls
     }
     struct PhotoLinks: Mappable {
         
@@ -57,6 +58,22 @@ struct UnsplashEntities {
             donwloadLocation <- map["download_location"]
             html <- map["html"]
             this <- map["self"]
+        }
+    }
+    
+    struct PhotoUrls: ImmutableMappable {
+        var raw: String
+        var full: String
+        var regular: String
+        var small: String
+        var thumb: String
+        
+        init(map: Map) throws {
+            raw = try map.value("raw")
+            full = try map.value("raw")
+            regular = try map.value("regular")
+            small = try map.value("small")
+            thumb = try map.value("thumb")
         }
     }
     
