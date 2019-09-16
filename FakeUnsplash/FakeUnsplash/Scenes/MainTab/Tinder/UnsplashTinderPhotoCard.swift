@@ -24,7 +24,7 @@ class UnsplashTinderPhotoCard: TinderImageCard {
     }
     
     func configure(){
-        let imageUrl: URL = URL(string: photo.urls.raw)!
+        let imageUrl: URL = URL(string: photo.urls.regular)!
         self.loadingView.startAnimating()
         imageView.kf.setImage(with: imageUrl, placeholder: nil, options: [
             .scaleFactor(UIScreen.main.scale),

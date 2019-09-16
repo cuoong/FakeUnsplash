@@ -9,7 +9,7 @@
 import Foundation
 import PromiseKit
 
-@objc class MainViewModel: NSObject {
+@objc class TinderViewModel: NSObject {
     var service: UnsplashService
     
     var photos: Array<UnsplashEntities.PhotoEntity> = [] {
@@ -47,7 +47,17 @@ import PromiseKit
         
     }
     
-    func popPhoto(_ photo: UnsplashEntities.PhotoEntity){
-        let _ = photos.popLast()
+    func getTopPhotoOnQueueAndPopit() -> Promise<UnsplashEntities.PhotoEntity>{
+        return Promise<UnsplashEntities.PhotoEntity> { seal in
+            if let top = photos.popLast() {
+                seal.fulfill(top)
+            }
+            requestPhotos().done({ (_) in
+                if let top = self.photos.popLast() {
+                    seal.fulfill(top)
+                }
+            }).catch(seal.reject)
+        }
+        
     }
 }

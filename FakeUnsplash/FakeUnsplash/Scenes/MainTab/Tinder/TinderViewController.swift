@@ -9,9 +9,9 @@
 import UIKit
 import Moya
 
-class MainViewController: UIViewController {
+class TinderViewController: UIViewController {
     
-    var viewModel: MainViewModel!
+    var viewModel: TinderViewModel!
     
     var tinderCards: [UnsplashTinderPhotoCard] = [UnsplashTinderPhotoCard(), UnsplashTinderPhotoCard()]
     
@@ -22,13 +22,9 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let service = UnsplashService(provider: MoyaProvider<UnsplashTargetType>())
-        viewModel = MainViewModel(service: service)
-        viewModel.requestPhotos()
-            .done { (success) in
-                self.settupRescusiveCards()
-            }.catch { (_) in
-                
-        }
+        viewModel = TinderViewModel(service: service)
+        
+        self.requestPhotos()
         self.initView()
         self.bindingViewModel()
     }
@@ -38,57 +34,71 @@ class MainViewController: UIViewController {
     }
     
     func bindingViewModel(){
-        observePhotos = viewModel.observe(\MainViewModel.favoritePhotoCount, options: [.new]) { [unowned self](_, change) in
+        observePhotos = viewModel.observe(\TinderViewModel.favoritePhotoCount, options: [.new]) { [unowned self](_, change) in
             self.tabBarItem.badgeValue = "\(change.newValue ?? 0)"
         }
     }
     
+    func requestPhotos(){
+        viewModel.requestPhotos()
+            .done { (success) in
+                self.settupRescusiveCards()
+            }.catch { (_) in
+                
+        }
+    }
+    
     func settupRescusiveCards() {
-        
-        
         for (index, tinderCard) in tinderCards.enumerated() {
             configureCard(tinderCard, index: index)
             if index < tinderCards.count - 1 {
                 tinderCard.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
             }
         }
-        
     }
     
     
     func configureCard(_ tinderCard: UnsplashTinderPhotoCard, index: Int){
         self.view.insertSubview(tinderCard, at: index)
         tinderCard.delegate = self
-        let size: CGSize = self.view.frame.size
+    
         tinderCard.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize(width: size.width - 30, height: size.height * 0.6))
-            make.center.equalTo(self.view.center)
+            make.width.equalTo(self.view).inset(30)
+            make.center.equalTo(self.view)
+            make.top.equalTo(self.view).inset(30)
+            make.bottom.equalTo(self.view).inset(50)
+            
         }
-        tinderCard.photo = self.viewModel.photos.popLast()
+        self.viewModel.getTopPhotoOnQueueAndPopit()
+            .done { (photo) in
+                tinderCard.photo = photo
+            }.catch { (_) in
+                
+        }
        
     }
-    
-    deinit {
-//        observePhotos.removeObserver(self.viewModel, forKeyPath: \MainViewModel.photoCount)
-    }
 
+    deinit {
+        observePhotos.invalidate()
+    }
 }
 
-extension MainViewController: TinderImageCardDelegate {
+extension TinderViewController: TinderImageCardDelegate {
+    
+    
     func tinderImageCard(_ card: TinderImageCard, onPanBegin sender: UIPanGestureRecognizer) {
         
     }
     
-    func tinderImageCard(_ card: TinderImageCard, onPanMove sender: UIPanGestureRecognizer) {
-        
+    func tinderImageCard(_ card: TinderImageCard, onPanMove sender: UIPanGestureRecognizer, direction: Direction) {
         guard let index: Int = tinderCards.firstIndex(of: card as! UnsplashTinderPhotoCard) else{
             return
         }
         let cardBehind: UnsplashTinderPhotoCard = tinderCards[index - 1]
+        
         UIView.animate(withDuration: 0.3, animations: {
             cardBehind.transform = .identity
         }, completion: nil)
-       
     }
     
     func tinderImageCard(_ card: TinderImageCard, onDragOut direction: Direction) {

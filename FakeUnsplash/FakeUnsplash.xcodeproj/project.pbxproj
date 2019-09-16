@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		48C27B3E1B865BE26954B889 /* Pods_FakeUnsplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7027F511B7B818C2FFDB85C /* Pods_FakeUnsplash.framework */; };
 		5E3C0CF82328E257008853AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0CF72328E257008853AC /* AppDelegate.swift */; };
-		5E3C0CFA2328E257008853AC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0CF92328E257008853AC /* MainViewController.swift */; };
+		5E3C0CFA2328E257008853AC /* TinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0CF92328E257008853AC /* TinderViewController.swift */; };
 		5E3C0CFD2328E257008853AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3C0CFB2328E257008853AC /* Main.storyboard */; };
 		5E3C0D002328E257008853AC /* FakeUnsplash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0CFE2328E257008853AC /* FakeUnsplash.xcdatamodeld */; };
 		5E3C0D022328E259008853AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3C0D012328E259008853AC /* Assets.xcassets */; };
@@ -18,6 +18,9 @@
 		5E3C0D222328EA9A008853AC /* UnsplashTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0D212328EA9A008853AC /* UnsplashTargetType.swift */; };
 		5E3C0D242328EB2B008853AC /* UnsplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C0D232328EB2B008853AC /* UnsplashService.swift */; };
 		B61B6C4F232E852600A51C2C /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B6C4E232E852600A51C2C /* MainTabViewController.swift */; };
+		B632AE92232F5AD0002EFE98 /* TinderViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AE91232F5AD0002EFE98 /* TinderViewModelTests.swift */; };
+		B632AE93232F5B5F002EFE98 /* TinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFD05A232B39520069FEF3 /* TinderViewModel.swift */; };
+		B632AE96232F6425002EFE98 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AE95232F6425002EFE98 /* ChatViewController.swift */; };
 		B63830E32329E0F9003E34C4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E22329E0F8003E34C4 /* Networking.swift */; };
 		B63830E52329E1AB003E34C4 /* UnsplashApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E42329E1AB003E34C4 /* UnsplashApi.swift */; };
 		B63830E72329E321003E34C4 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E62329E321003E34C4 /* Entities.swift */; };
@@ -30,7 +33,7 @@
 		B63830F8232A5067003E34C4 /* UnsplashApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E82329EC82003E34C4 /* UnsplashApiConfig.swift */; };
 		B63830F9232A506B003E34C4 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E62329E321003E34C4 /* Entities.swift */; };
 		B63830FA232A5071003E34C4 /* ListPhoto.json in Resources */ = {isa = PBXBuildFile; fileRef = B63830F3232A4B2A003E34C4 /* ListPhoto.json */; };
-		B6AFD05B232B39520069FEF3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFD05A232B39520069FEF3 /* MainViewModel.swift */; };
+		B6AFD05B232B39520069FEF3 /* TinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFD05A232B39520069FEF3 /* TinderViewModel.swift */; };
 		B6AFD05F232B436A0069FEF3 /* TinderImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFD05E232B436A0069FEF3 /* TinderImageCard.swift */; };
 		B6AFD061232B4B5D0069FEF3 /* UnsplashTinderPhotoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFD060232B4B5D0069FEF3 /* UnsplashTinderPhotoCard.swift */; };
 		BEB19EF857FFA46D51549C1B /* Pods_FakeUnsplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21187672123BAE070EEEE96 /* Pods_FakeUnsplashTests.framework */; };
@@ -51,7 +54,7 @@
 		353A911E379B37B5FF307BD4 /* Pods-FakeUnsplash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUnsplash.debug.xcconfig"; path = "Target Support Files/Pods-FakeUnsplash/Pods-FakeUnsplash.debug.xcconfig"; sourceTree = "<group>"; };
 		5E3C0CF42328E257008853AC /* FakeUnsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeUnsplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3C0CF72328E257008853AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E3C0CF92328E257008853AC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5E3C0CF92328E257008853AC /* TinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewController.swift; sourceTree = "<group>"; };
 		5E3C0CFC2328E257008853AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E3C0CFF2328E257008853AC /* FakeUnsplash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FakeUnsplash.xcdatamodel; sourceTree = "<group>"; };
 		5E3C0D012328E259008853AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,13 +67,15 @@
 		5E3C0D232328EB2B008853AC /* UnsplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
 		69B3A749ADE9F504FBBE5C7A /* Pods-FakeUnsplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUnsplash.release.xcconfig"; path = "Target Support Files/Pods-FakeUnsplash/Pods-FakeUnsplash.release.xcconfig"; sourceTree = "<group>"; };
 		B61B6C4E232E852600A51C2C /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		B632AE91232F5AD0002EFE98 /* TinderViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewModelTests.swift; sourceTree = "<group>"; };
+		B632AE95232F6425002EFE98 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B63830E22329E0F8003E34C4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		B63830E42329E1AB003E34C4 /* UnsplashApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashApi.swift; sourceTree = "<group>"; };
 		B63830E62329E321003E34C4 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		B63830E82329EC82003E34C4 /* UnsplashApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashApiConfig.swift; sourceTree = "<group>"; };
 		B63830EE232A4903003E34C4 /* UnsplashServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashServicesTests.swift; sourceTree = "<group>"; };
 		B63830F3232A4B2A003E34C4 /* ListPhoto.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ListPhoto.json; sourceTree = "<group>"; };
-		B6AFD05A232B39520069FEF3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B6AFD05A232B39520069FEF3 /* TinderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewModel.swift; sourceTree = "<group>"; };
 		B6AFD05E232B436A0069FEF3 /* TinderImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderImageCard.swift; sourceTree = "<group>"; };
 		B6AFD060232B4B5D0069FEF3 /* UnsplashTinderPhotoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashTinderPhotoCard.swift; sourceTree = "<group>"; };
 		C7027F511B7B818C2FFDB85C /* Pods_FakeUnsplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FakeUnsplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +144,7 @@
 		5E3C0D0E2328E259008853AC /* FakeUnsplashTests */ = {
 			isa = PBXGroup;
 			children = (
+				B632AE90232F5AB1002EFE98 /* ModuleTests */,
 				B63830ED232A48DF003E34C4 /* NetworkingTests */,
 				5E3C0D0F2328E259008853AC /* FakeUnsplashTests.swift */,
 				5E3C0D112328E259008853AC /* Info.plist */,
@@ -159,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				B61B6C4D232E850500A51C2C /* MainTab */,
-				B6AFD059232B39220069FEF3 /* Main */,
 				5E3C0CFB2328E257008853AC /* Main.storyboard */,
 			);
 			path = Scenes;
@@ -202,9 +207,27 @@
 		B61B6C4D232E850500A51C2C /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
+				B632AE94232F6414002EFE98 /* Chat */,
+				B6AFD059232B39220069FEF3 /* Tinder */,
 				B61B6C4E232E852600A51C2C /* MainTabViewController.swift */,
 			);
 			path = MainTab;
+			sourceTree = "<group>";
+		};
+		B632AE90232F5AB1002EFE98 /* ModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B632AE91232F5AD0002EFE98 /* TinderViewModelTests.swift */,
+			);
+			path = ModuleTests;
+			sourceTree = "<group>";
+		};
+		B632AE94232F6414002EFE98 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B632AE95232F6425002EFE98 /* ChatViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		B63830ED232A48DF003E34C4 /* NetworkingTests */ = {
@@ -223,14 +246,14 @@
 			path = TestData;
 			sourceTree = "<group>";
 		};
-		B6AFD059232B39220069FEF3 /* Main */ = {
+		B6AFD059232B39220069FEF3 /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
-				5E3C0CF92328E257008853AC /* MainViewController.swift */,
-				B6AFD05A232B39520069FEF3 /* MainViewModel.swift */,
+				5E3C0CF92328E257008853AC /* TinderViewController.swift */,
+				B6AFD05A232B39520069FEF3 /* TinderViewModel.swift */,
 				B6AFD060232B4B5D0069FEF3 /* UnsplashTinderPhotoCard.swift */,
 			);
-			path = Main;
+			path = Tinder;
 			sourceTree = "<group>";
 		};
 		B6AFD05C232B434A0069FEF3 /* Components */ = {
@@ -440,15 +463,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E3C0D222328EA9A008853AC /* UnsplashTargetType.swift in Sources */,
-				5E3C0CFA2328E257008853AC /* MainViewController.swift in Sources */,
+				5E3C0CFA2328E257008853AC /* TinderViewController.swift in Sources */,
 				5E3C0D002328E257008853AC /* FakeUnsplash.xcdatamodeld in Sources */,
 				B63830E32329E0F9003E34C4 /* Networking.swift in Sources */,
 				B6AFD061232B4B5D0069FEF3 /* UnsplashTinderPhotoCard.swift in Sources */,
 				B63830E72329E321003E34C4 /* Entities.swift in Sources */,
 				B61B6C4F232E852600A51C2C /* MainTabViewController.swift in Sources */,
 				B6AFD05F232B436A0069FEF3 /* TinderImageCard.swift in Sources */,
-				B6AFD05B232B39520069FEF3 /* MainViewModel.swift in Sources */,
+				B6AFD05B232B39520069FEF3 /* TinderViewModel.swift in Sources */,
 				B63830E52329E1AB003E34C4 /* UnsplashApi.swift in Sources */,
+				B632AE96232F6425002EFE98 /* ChatViewController.swift in Sources */,
 				5E3C0CF82328E257008853AC /* AppDelegate.swift in Sources */,
 				5E3C0D242328EB2B008853AC /* UnsplashService.swift in Sources */,
 				B63830E92329EC82003E34C4 /* UnsplashApiConfig.swift in Sources */,
@@ -461,9 +485,11 @@
 			files = (
 				B63830F7232A4EC4003E34C4 /* UnsplashTargetType.swift in Sources */,
 				B63830F6232A4EB3003E34C4 /* UnsplashApi.swift in Sources */,
+				B632AE92232F5AD0002EFE98 /* TinderViewModelTests.swift in Sources */,
 				B63830F8232A5067003E34C4 /* UnsplashApiConfig.swift in Sources */,
 				5E3C0D102328E259008853AC /* FakeUnsplashTests.swift in Sources */,
 				B63830F9232A506B003E34C4 /* Entities.swift in Sources */,
+				B632AE93232F5B5F002EFE98 /* TinderViewModel.swift in Sources */,
 				B63830EF232A4903003E34C4 /* UnsplashServicesTests.swift in Sources */,
 				B63830F5232A4EAE003E34C4 /* UnsplashService.swift in Sources */,
 			);
