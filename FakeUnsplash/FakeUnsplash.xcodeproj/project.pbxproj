@@ -21,6 +21,11 @@
 		B632AE92232F5AD0002EFE98 /* TinderViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AE91232F5AD0002EFE98 /* TinderViewModelTests.swift */; };
 		B632AE93232F5B5F002EFE98 /* TinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFD05A232B39520069FEF3 /* TinderViewModel.swift */; };
 		B632AE96232F6425002EFE98 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AE95232F6425002EFE98 /* ChatViewController.swift */; };
+		B632AE9D232F6A0D002EFE98 /* TwiClientWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AE9C232F6A0D002EFE98 /* TwiClientWrapper.swift */; };
+		B632AE9F232F6B72002EFE98 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AE9E232F6B72002EFE98 /* ChatViewModel.swift */; };
+		B632AEA1232F6FAA002EFE98 /* ChannelListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AEA0232F6FAA002EFE98 /* ChannelListCollectionView.swift */; };
+		B632AEA3232F721B002EFE98 /* ChannelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AEA2232F721B002EFE98 /* ChannelViewCell.swift */; };
+		B632AEA5232F7274002EFE98 /* ChannelViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B632AEA4232F7274002EFE98 /* ChannelViewCellViewModel.swift */; };
 		B63830E32329E0F9003E34C4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E22329E0F8003E34C4 /* Networking.swift */; };
 		B63830E52329E1AB003E34C4 /* UnsplashApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E42329E1AB003E34C4 /* UnsplashApi.swift */; };
 		B63830E72329E321003E34C4 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63830E62329E321003E34C4 /* Entities.swift */; };
@@ -69,6 +74,11 @@
 		B61B6C4E232E852600A51C2C /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		B632AE91232F5AD0002EFE98 /* TinderViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewModelTests.swift; sourceTree = "<group>"; };
 		B632AE95232F6425002EFE98 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B632AE9C232F6A0D002EFE98 /* TwiClientWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwiClientWrapper.swift; sourceTree = "<group>"; };
+		B632AE9E232F6B72002EFE98 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		B632AEA0232F6FAA002EFE98 /* ChannelListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListCollectionView.swift; sourceTree = "<group>"; };
+		B632AEA2232F721B002EFE98 /* ChannelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewCell.swift; sourceTree = "<group>"; };
+		B632AEA4232F7274002EFE98 /* ChannelViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewCellViewModel.swift; sourceTree = "<group>"; };
 		B63830E22329E0F8003E34C4 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		B63830E42329E1AB003E34C4 /* UnsplashApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashApi.swift; sourceTree = "<group>"; };
 		B63830E62329E321003E34C4 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
@@ -126,6 +136,7 @@
 		5E3C0CF62328E257008853AC /* FakeUnsplash */ = {
 			isa = PBXGroup;
 			children = (
+				B632AE97232F6729002EFE98 /* Thirdparty */,
 				B6AFD05C232B434A0069FEF3 /* Components */,
 				5E3C0D1F2328E2E4008853AC /* Extension */,
 				5E3C0D1D2328E2CB008853AC /* Model */,
@@ -226,6 +237,34 @@
 			isa = PBXGroup;
 			children = (
 				B632AE95232F6425002EFE98 /* ChatViewController.swift */,
+				B632AE9E232F6B72002EFE98 /* ChatViewModel.swift */,
+				B632AEA0232F6FAA002EFE98 /* ChannelListCollectionView.swift */,
+				B632AEA2232F721B002EFE98 /* ChannelViewCell.swift */,
+				B632AEA4232F7274002EFE98 /* ChannelViewCellViewModel.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		B632AE97232F6729002EFE98 /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				B632AE98232F673B002EFE98 /* Twilio */,
+			);
+			path = Thirdparty;
+			sourceTree = "<group>";
+		};
+		B632AE98232F673B002EFE98 /* Twilio */ = {
+			isa = PBXGroup;
+			children = (
+				B632AE99232F6741002EFE98 /* Chat */,
+			);
+			path = Twilio;
+			sourceTree = "<group>";
+		};
+		B632AE99232F6741002EFE98 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B632AE9C232F6A0D002EFE98 /* TwiClientWrapper.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -468,14 +507,19 @@
 				B63830E32329E0F9003E34C4 /* Networking.swift in Sources */,
 				B6AFD061232B4B5D0069FEF3 /* UnsplashTinderPhotoCard.swift in Sources */,
 				B63830E72329E321003E34C4 /* Entities.swift in Sources */,
+				B632AEA1232F6FAA002EFE98 /* ChannelListCollectionView.swift in Sources */,
 				B61B6C4F232E852600A51C2C /* MainTabViewController.swift in Sources */,
+				B632AE9D232F6A0D002EFE98 /* TwiClientWrapper.swift in Sources */,
 				B6AFD05F232B436A0069FEF3 /* TinderImageCard.swift in Sources */,
+				B632AEA3232F721B002EFE98 /* ChannelViewCell.swift in Sources */,
 				B6AFD05B232B39520069FEF3 /* TinderViewModel.swift in Sources */,
+				B632AE9F232F6B72002EFE98 /* ChatViewModel.swift in Sources */,
 				B63830E52329E1AB003E34C4 /* UnsplashApi.swift in Sources */,
 				B632AE96232F6425002EFE98 /* ChatViewController.swift in Sources */,
 				5E3C0CF82328E257008853AC /* AppDelegate.swift in Sources */,
 				5E3C0D242328EB2B008853AC /* UnsplashService.swift in Sources */,
 				B63830E92329EC82003E34C4 /* UnsplashApiConfig.swift in Sources */,
+				B632AEA5232F7274002EFE98 /* ChannelViewCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

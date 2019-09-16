@@ -23,6 +23,7 @@ PODS:
   - SnapKit (5.0.1)
   - SwiftDate (6.0.3)
   - SwiftLint (0.34.0)
+  - TwilioChatClient (2.6.0)
 
 DEPENDENCIES:
   - Kingfisher (= 4.10.0)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - SnapKit (~> 5.0.0)
   - SwiftDate
   - SwiftLint
+  - TwilioChatClient (~> 2.6.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -47,6 +49,7 @@ SPEC REPOS:
     - SnapKit
     - SwiftDate
     - SwiftLint
+    - TwilioChatClient
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -60,7 +63,8 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftDate: 8d4f14bf1ef68e95094511504856547bf9e3e1a6
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
+  TwilioChatClient: ce41a128970a747bc82b2546ad5449276eff3b67
 
-PODFILE CHECKSUM: fa7aadc3a8fb01ed2ed98434580383f40146c22e
+PODFILE CHECKSUM: b54478cb3b26d9c27d99ff25b8747bca8932b6a7
 
 COCOAPODS: 1.7.5

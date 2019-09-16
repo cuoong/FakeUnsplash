@@ -41,6 +41,8 @@ target 'FakeUnsplash' do
   autolayout
   untilities
 
+  pod 'TwilioChatClient', '~> 2.6.0' 
+
   target 'FakeUnsplashTests' do
     inherit! :search_paths
     # Pods for testing
